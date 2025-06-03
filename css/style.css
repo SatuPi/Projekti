@@ -6,8 +6,8 @@
 
 :root {
   --primary-color: #ff48e7;
-  --light-color: #f4f4f6;
-  --dark-color: #111;
+  --light-color: #e2e2e6;
+  --dark-color: #3a3a3a;
 }
 
 body {
@@ -18,6 +18,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 a {
   text-decoration: none;
   color: #333;
@@ -25,6 +27,7 @@ a {
 
 ul {
   list-style: none;
+  color: #000;
 }
 
 img {
@@ -42,6 +45,11 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar .logo img {
+  max-width: 150px; /* säädä pienemmäksi esim. 120px tai 100px */
+  height: auto;
 }
 
 .navbar .main-menu ul {
@@ -65,6 +73,13 @@ img {
 
 .navbar ul li:last-child a {
   margin-left: 10px;
+  background-color: #e0e0e0; /* normaali tausta */
+  border-radius: 10px;
+}
+
+.navbar ul li:last-child a:hover {
+  background-color: var(--primary-color); /* hover-tausta pinkiksi */
+  color: #fff; /* teksti valkoiseksi */
 }
 
 /* HAMPURILAINEN */
@@ -146,7 +161,7 @@ img {
 }
 
 
-/* HERO-SLIDER (kuvat ja nuolet) */
+/* HERO-KUVARULLA */
 .hero-slider {
   position: relative;
   text-align: center;
@@ -166,7 +181,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  background: #fcdcf7; /* vaaleanpunainen tausta */
+  background: var(--light-color);
   color: #0f0f0f;
   border: none;
   cursor: pointer;
@@ -191,7 +206,6 @@ img {
 
 /* HERO-CONTENT (tekstit ja painikkeet) */
 .hero {
-  margin-bottom: 50px;
   padding: 40px 0;
   background: #f9f9f9;
 }
@@ -215,6 +229,31 @@ img {
   flex-wrap: wrap;
 }
 
+/* Aloita tästä – oletustila */
+.btn-start {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Aloita tästä – kun harmaana */
+.btn-start.greyed {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Varaa demo – oletustila */
+.btn-demo {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Varaa demo – hoverilla */
+.btn-demo.hovered {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
 @media (max-width: 768px) {
   .slider-btn {
     font-size: 1.5rem;
@@ -231,25 +270,64 @@ img {
 }
 
 
-/* SUOSITTELIJAT */
+/* PALVELUT */
 .testimonials {
-  padding: 40px 0;
+  background-color: #e0e0e0; 
+  padding: 40px 0;               
+}
+.testimonials h2 {
+  text-align: center;             
+  font-size: 2em;                 
+  margin-bottom: 40px;    
 }
 
-.testimonials .testimonials-heading {
-  width: 700px;
-  margin-bottom: 40px;
+.service-cards {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;               
+  gap: 2rem;                     
 }
 
-.testimonials .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.card {
+  width: 250px;
+  height: 250px;
+  background-color: #fff; 
+  color: #000;        
+  padding: 1em;  
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);                
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;             
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonials .card p:nth-child(2) {
-  margin-top: 30px;
-  font-weight: bold;
+.card .icon {
+  font-size: 1.8em;               
+  color: #0a0c0a;                 
+  align-content: center;           
+}
+
+.card h3 {
+  color: #000;
+  text-transform: uppercase;      
+  align-content: center;            
+  font-size: 1.5em; 
+  font-weight: bold;              
+}
+
+.card p {
+  color: #000;
+  margin: 0 1.5em 0.5em 1.5em;                     
+  line-height: 1.5;  
+  font-size: 1em;             
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  color: var(--primary-color);
 }
 
 /* HINNAT */
@@ -257,7 +335,23 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
+}
+
+.pricing-card {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .pricing .pricing-card-subheading {
@@ -271,7 +365,7 @@ img {
 }
 
 .pricing-card-header {
-  padding-top: 10;
+  padding-top: 40;
   margin-top: 0;
 }
 
@@ -313,11 +407,11 @@ img {
 .card {
   background: #fff;
   color:var(--primary-color);
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   padding: 10px;
 }
 
-/* PAINIKKEET */
+/* PAINIKKEET 
 .btn {
   display: inline-block;
   padding: 13px 20px;
@@ -330,6 +424,15 @@ img {
   cursor: pointer;
   text-align: center;
   transition: 0.5s;
+}*/
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover {
@@ -353,7 +456,7 @@ img {
 
 /* FAQ */
 .faq {
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .faq .faq-group {
@@ -362,7 +465,7 @@ img {
 }
 
 .faq .faq-group .faq-group-header {
-  padding: 20px 0;
+  padding: 10px 0;
   margin-bottom: 15px;
   position: relative;
 }
@@ -436,13 +539,14 @@ img {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   gap: 30px;
   justify-content: center;
   align-items: center;
 }
 
 .footer .card {
+  width: auto;
   margin: 20px 30px 30px 0;
 }
 
@@ -452,6 +556,25 @@ img {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 20px 0;
+}
+
+  .footer-socials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1,5rem;  /* suurempi koko */
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-color); /* pinkiksi hoverissa */
 }
 
 /* Mobile Menu */
@@ -501,12 +624,11 @@ img {
     display: block;
   }
 
-  .hero .container {
-    background: url('../images/hero-mobile.jpg') no-repeat;
+  /*.hero .container {
     background-size: 350px 400px;
     background-position: bottom;
     height: 770px;
-  }
+  }*/
 
   .hero .hero-content,
   .hero .hero-text {
@@ -538,6 +660,8 @@ img {
   .footer .footer-grid > div {
     text-align: center;
   }
+
+
 
   /* Text */
   .text-xl {

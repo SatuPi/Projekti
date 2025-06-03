@@ -12,7 +12,7 @@ rel="stylesheet"/>
 integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/style.css">
-<link rel="shotrcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shotrcut icon" href="images/favicon.pgn" type="image/x-icon">
 
       </head>
   <body>
@@ -22,7 +22,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       <div class="container">
         <div class="logo">
           <a href="index.html">
-            <img src="images/logo-black.PNG" alt="logo" />
+            <img src="images/logo.jpg" alt="logo" />
           </a>
         </div>
 
@@ -69,7 +69,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </nav>
 
 
-    <!-- HERO -->
+<!-- HERO -->
 
 <!-- HERO-KUVAKARUSELLI -->
 <section class="hero-slider">
@@ -82,55 +82,49 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <section class="hero">
   <div class="container text-center">
     <div class="hero-content">
-      <h1 class="hero-heading text-xxl">Toimiva projekti!</h1>
+      <h1 class="hero-heading text-xl">TOIMIVA PROJEKTI!</h1>
       <p class="hero-text">Tässä on hieno toimiva projekti.</p>
       <div class="hero-buttons">
-        <a href="#" class="btn btn-primary">Aloita tästä</a>
-        <a href="#" class="btn"><i class="fas fa-laptop"></i> Varaa demo</a>
+        <a href="#" class="btn btn-start">Aloita tästä</a>
+        <a href="#" class="btn btn-demo">Varaa demo</a>
       </div>
     </div>
   </div>
 </section>
 
-    <!-- SUOSITTELIJAT -->
-    <section class="testimonials bg-dark">
-      <div class="container">
-        <h3 class="testimonials-heading text-xl">
-          Älä usko vain meidän sanaa, vaan kuuntele käyttäjiä.
-        </h3>
-        <div class="testimonials-grid">
-          <div class="card">
-            <p>
-              “Kaikki on parempaa tämän jälkeen.”
-            </p>
 
-            <p>Sanna Suosittelija</p>
-            <p>ABC Yhtiö</p>
-          </div>
+<!-- PALVELUT -->
+<section class="testimonials">
+  <h2>Palvelumme</h2>
+  <div class="service-cards">
+    <!-- Palvelukortti 1 -->
+    <div class="card">
 
-          <div class="card">
-            <p>
-              “Olemme tosi tyytyväisiä.”
-            </p>
+      <!--<div class="icon">✔</div>-->
+      <div class="icon"><i class="far fa-check-square light"></i></div>
+      <h3>Palvelu 1</h3>
+      <p>Tämä on hyvä palvelu ja tähän kuuluu hyviä asioita.</p>
+    </div>
+    <!-- Palvelukortti 2 -->
+    <div class="card">
+      <!--<div class="icon">✔</div>-->
+      <div class="icon"><i class="far fa-check-square light"></i></div>
+      <h3>Palvelu 2</h3>
+      <p>Tämä on tosi hyvä palvelu ja tähän kuuluu tosi hyviä asioita.</p>
+    </div>
+    <!-- Palvelukortti 3 -->
+    <div class="card">
+      <!--<div class="icon">✔</div>-->
+      <div class="icon"><i class="far fa-check-square light"></i></div>
+      <h3>Palvelu 3</h3>
+      <p>Tämä on erityisen hyvä palvelu ja tähän kuuluu erityisen hyviä asioita.</p>
+    </div>
+  </div>
+</section>
 
-            <p>Tyyne Tyytyväinen</p>
-            <p>123 Oy</p>
-          </div>
-
-          <div class="card">
-            <p>
-              “Toimii!”
-            </p>
-
-            <p>Anna Asiakas</p>
-            <p>A1 Oy</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- HINNASTO -->
-    <section class="pricing bg-black">
+    <section class="pricing bg-light">
       <div class="container-sm">
         <h3 class="pricing-heading text-xl text-center">Hinnasto</h3>
         <p class="pricing-subheading text-md text-center">
@@ -138,19 +132,20 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </p>
         <div class="pricing-grid">
           <!-- HINTA 1 -->
-          <div class="card bg-light">
+          <div class="card pricing-card bg-light">
             <div class="pricing-card-header">
-              <h4 class="pricing-heading text-xl">Normi</h4>
-              <p class="pricing-card-subheading">
+              <h4 class="pricing-heading text-xl text-center">Normi</h4>
+              <p class="pricing-card-subheading text-center">
                 Seuraa normaaleja asioita.
+                
               </p>
-              <p class="pricing-card-price">
+              <p class="pricing-card-price text-center">
                 <span class="text-xl">Ilmainen</span>
                
                 *Luottotietoja ei tarvita
               </p>
             </div>
-            <div class="pricing-card-body">
+            <div class="pricing-card-body text-center">
               <ul>
                 <li><i class="fas fa-check"></i> Realiaikainen seuranta</li>
                 <li>
@@ -158,29 +153,29 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </li>
                 <li><i class="fas fa-check"></i>Ajanvaraus</li>
               </ul>
-              <a href="#" class="btn btn-primary btn-block">Aloita tästä</a>
+              <a href="#" class="btn btn-primary btn-block">Valitse</a>
             </div>
           </div>
 
           <!-- HINTA 2 -->
-          <div class="card bg-black">
+          <div class="card pricing-card bg-black">
             <div class="pricing-card-header">
-              <h4 class="pricing-card-heading text-xl">Extra</h4>
-              <p class="pricing-card-subheading">
+              <h4 class="pricing-card-heading text-xl text-center">Extra</h4>
+              <p class="pricing-card-subheading text-center">
                 Seuraa kaikkia asioita.
               </p>
-              <p class="pricing-card-price">
-                <span class="text-xl">99€</span> /kuukausi
+              <p class="pricing-card-price text-center">
+                <span class="text-xl text-center">99€</span> /kuukausi
               </p>
             </div>
-            <div class="pricing-card-body">
+            <div class="pricing-card-body text-center">
               <p>Normin lisäksi saat:</p>
               <ul>
                 <li><i class="fas fa-check"></i>Lisää seurattavaa</li>
                 <li><i class="fas fa-check"></i>Visuaaliset mittarit</li>
                 <li><i class="fas fa-check"></i>Ennakoiva ajanvaraus</li>
               </ul>
-              <a href="#" class="btn btn-primary btn-block">Aloita tästä</a>
+              <a href="#" class="btn btn-primary btn-block">Valitse</a>
             </div>
           </div>
         </div>
@@ -254,36 +249,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           <div class="faq-group">
             <div class="faq-group-header">
               <h4 class="text-md">
-                Can I collaborate with my team in real-time using all tools?
-              </h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
-                aliquid. Repellat animi quam vitae.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">Is the app available on all devices?</h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
-                aliquid. Repellat animi quam vitae.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">
                 How does the app help me stay compliant when working with
                 freelancers and contractors?
               </h4>
@@ -306,49 +271,40 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       <div class="container">
         <div class="footer-grid">
           <div>
-            <a href="index.html">
-              <img src="images/logo-white.png" alt="logo" />
-            </a>
+            
             <div class="card">
-              <h4>Subscribe to Newsletter</h4>
+              <h4>UUTISKIRJE</h4>
               <p class="text-sm">
-                Subscribe now to receive tips on how to take your business to
-                the next level.
+                Liity postituslistalle ja kuule eduista ensimmäisenä.
               </p>
               <form>
-                <input type="email" id="email" placeholder="Enter your email" />
-                <button type="submit" class="btn btn-primary btn-block">
-                  Subscribe
+                <input type="email" id="email" placeholder="etunimi.sukunimi@email.com" />
+                <button type="submit" class="btn btn-primary">
+                  Liity
                 </button>
               </form>
             </div>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-twitter"></i>
+
           </div>
           <div>
-            <h4>Company</h4>
+            <h4>Projekti Oy</h4>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Process</a></li>
-              <li><a href="#">Join Our Team</a></li>
+              <li><a href="#">  </a></li>
+              <li><a href="#">Ota yhteyttä</a></li>
+              <li><a href="#"> <i class="fas fa-phone"></i> Puhelin +358123456789</a></li>
+              <li><a href="#"> <i class="fas fa-at"></i> Sähköposti projekti@projekti.com</a></li>
+              
             </ul>
           </div>
           <div>
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Research</a></li>
-              <li><a href="#">Recent Projects</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <ul>
-              <li>
-                <a href="#">hello@growthapp.com</a>
-              </li>
-            </ul>
-          </div>
+
+            <div class="footer-socials">
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+          
         </div>
       </div>
     </footer>

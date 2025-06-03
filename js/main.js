@@ -73,3 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateImage();
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.querySelector('.btn-start');
+  const demoBtn = document.querySelector('.btn-demo');
+
+  demoBtn.addEventListener('mouseenter', () => {
+    demoBtn.classList.add('hovered');
+    startBtn.classList.add('greyed');
+  });
+
+  demoBtn.addEventListener('mouseleave', () => {
+    demoBtn.classList.remove('hovered');
+    startBtn.classList.remove('greyed');
+  });
+});
