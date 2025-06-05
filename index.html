@@ -15,6 +15,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="shortcut icon" href="images/planeetta.png" type="image/x-icon">
 
       </head>
+<button id="scrollToTopBtn" class="scroll-btn" title="Takaisin ylös">&#8593;</button>
   <body>
 
 
@@ -40,7 +41,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- Kirjaudu hoverilla avautuva -->
         <li class="login-wrapper">
-          <a href="#" class="btn-login">Kirjaudu</a>
+          <a href="#" class="btn-login">🧑‍🚀 Kirjaudu</a>
           <div class="login-popup">
 
             <form>
@@ -89,22 +90,30 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO -->
 
-<!-- HERO-SISÄLTÖ (teksti ja painikkeet)  HERO-SISÄLTÖ HERO-SISÄLTÖ HERO-SISÄLTÖ -->
 <section class="hero">
   <div class="container text-center">
     <div class="hero-content">
       <h1 class="hero-heading text-xl">TOIMIVA PALVELU!</h1>
       <p class="hero-text">Tässä on hieno toimiva palvelu.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-start">Aloita tästä</a>
-        <!--<a href="#" class="btn btn-demo">Varaa demo</a>-->
-        <a href="javascript:void(0)" class="btn btn-demo" 
-        onclick="document.getElementById('calendar-modal').style.display='block'">
-        Varaa demo</a>
+
+      <!-- Video näkyvissä automaattisesti -->
+      <div id="hero-video-wrapper" style="margin: 20px auto; max-width: 720px;">
+        <video id="heroVideo" width="100%" autoplay muted loop playsinline>
+          <source src="videos/demo.mp4" type="video/mp4" />
+          Selaimesi ei tue videon toistoa.
+        </video>
+      </div>
+
+      <!-- Painikkeet videon alla -->
+      <div class="hero-buttons" style="margin-top: 20px;">
+        <a href="#" class="btn btn-start">Liity asiakkaaksi</a>
+        <a href="javascript:void(0)" class="btn btn-demo"
+          onclick="document.getElementById('calendar-modal').style.display='block'">Varaa demo</a>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS -->
 <div id="calendar-modal" class="modal">
@@ -179,7 +188,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <p class="pricing-card-subheading text-center">
                 Seuraa normaaleja asioita.</p>
               <p class="pricing-card-price text-center">
-                <span class="text-xl">Ilmainen</span>*Luottotietoja ei tarvita</p>
+                <span class="text-xl">Ilmainen</span>  *Luottotietoja ei tarvita</p>
             </div>
             <div class="pricing-card-body text-center">
               <ul>
