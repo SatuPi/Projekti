@@ -12,39 +12,62 @@ rel="stylesheet"/>
 integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="css/style.css">
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/planeetta.png" type="image/x-icon">
 
       </head>
   <body>
 
 
 <!--NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI-->
-    <nav class="navbar">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img src="images/logo.jpg" alt="logo" />
-          </a>
-        </div>
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html"><img src="images/planeetta.png" alt="logo" /></a>
+    </div>
 
-        <div class="main-menu">
-          <ul>
-            <li>
-              <a href="index.html">Etusivu</a>
-            </li>
-            <li>
-              <a href="#">Meistä</a>
-            </li>
-            <li>
-              <a href="#">Blogi</a>
-            </li>
-            <li>
-              <!--<a class="btn" href="#"> <i class="fas fa-user"></i> Kirjaudu </a>-->
-              <a href="#" class="btn-login" onclick="document.getElementById('login-modal').style.display='block'">
-                Kirjaudu</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Hampurilaisvalikko -->
+    <button class="hamburger-button">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="main-menu">
+      <ul>
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="#">Meistä</a></li>
+        <li><a href="#">Blogi</a></li>
+
+        <!-- Kirjaudu hoverilla avautuva -->
+        <li class="login-wrapper">
+          <a href="#" class="btn-login">Kirjaudu</a>
+          <div class="login-popup">
+
+            <form>
+              <h3>Kirjaudu sisään</h3>
+              <input type="text" placeholder="Käyttäjätunnus" required />
+              <input type="password" placeholder="Salasana" required />
+              <button type="submit" class="btn btn-primary">Kirjaudu</button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-mobile-menu" aria-label="Sulje valikko">&times;</button>
+  <ul>
+    <li><a href="index.html">Etusivu</a></li>
+    <li><a href="#">Meistä</a></li>
+    <li><a href="#">Blogi</a></li>
+    <li><a href="#">Kirjaudu</a></li>
+  </ul>
+</div>
+
+
 
 <!-- KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN -->
 <div id="login-modal" class="modal">
@@ -63,41 +86,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   </div>
 </div>
 
-<!--HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN-->
-        <button class="hamburger-button">
-          <div class="hamburger-line"></div>
-          <div class="hamburger-line"></div>
-          <div class="hamburger-line"></div>
-        </button>
-        <div class="mobile-menu">
-          <ul>
-            <li>
-              <a href="index.html">Etusivu</a>
-            </li>
-            <li>
-              <a href="#">Meistä</a>
-            </li>
-            <li>
-              <a href="#">Blogi</a>
-            </li>
-            <li>
-              <a class="btn" href="#"> <i class="fas fa-user"></i> Kirjaudu </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
 
 <!-- HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO -->
-
-<!-- HERO-KUVAKARUSELLI HERO-KUVAKARUSELLI HERO-KUVAKARUSELLI HERO-KUVAKARUSELLI -->
-<section class="hero-slider">
-  <button class="slider-btn left">&#8592;</button>
-  <img id="hero-image" src="images/kuva1.jpg" alt="Hero Image" class="hero-image" />
-  <button class="slider-btn right">&#8594;</button>
-</section>
-
 
 <!-- HERO-SISÄLTÖ (teksti ja painikkeet)  HERO-SISÄLTÖ HERO-SISÄLTÖ HERO-SISÄLTÖ -->
 <section class="hero">
@@ -115,7 +105,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </div>
   </div>
 </section>
-
 
 <!-- AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS -->
 <div id="calendar-modal" class="modal">
@@ -140,6 +129,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     <button type="submit" class="btn btn-primary">Varaa</button>
   </form>
 </div>
+</div>
 
 <!-- PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT -->
 <section class="testimonials">
@@ -149,24 +139,29 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     <div class="card">
 
       <!--<div class="icon">✔</div>-->
+      
       <div class="icon"><i class="far fa-check-square light"></i></div>
       <h3>Palvelu 1</h3>
       <p>Tämä on hyvä palvelu ja tähän kuuluu hyviä asioita.</p>
+      <img src="images/maa.jpg" alt="Palvelukuva" class="card-image" />
     </div>
     <!-- Palvelukortti 2 -->
     <div class="card">
       <div class="icon"><i class="far fa-check-square light"></i></div>
       <h3>Palvelu 2</h3>
       <p>Tämä on tosi hyvä palvelu ja tähän kuuluu tosi hyviä asioita.</p>
+      <img src="images/mars.jpg" alt="Palvelukuva" class="card-image" />
     </div>
     <!-- Palvelukortti 3 -->
     <div class="card">
       <div class="icon"><i class="far fa-check-square light"></i></div>
       <h3>Palvelu 3</h3>
       <p>Tämä on erityisen hyvä palvelu ja tähän kuuluu erityisen hyviä asioita.</p>
+      <img src="images/merkurius.jpg" alt="Palvelukuva" class="card-image" />
     </div>
   </div>
 </section>
+
 
 
 <!-- HINNASTO HINNASTO HINNASTO HINNASTO HINNASTO HINNASTO HINNASTO HINNASTO HINNASTO -->
@@ -220,12 +215,25 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <a href="#" class="btn btn-primary btn-block">Valitse</a>
             </div>
           </div>
-        </div>
+       <!--- </div>
         <p class="pricing-footer text-center">
           Kaikkiin hintoihin kuuluu verot ja sellaiset.
         </p>
-      </div>
+      </div>-->
     </section>
+
+
+<!-- KUVAKARUSELLI KUVAKARUSELLI KUVAKARUSELLI KUVAKARUSELLI -->
+<section class="slider">
+  <button class="slider-btn left">&#8592;</button>
+  <img id="slider-image" src="images/kuva1.jpg" alt="KaruselliImage" class="carousel-image" />
+   <div class="slider-text">
+    <h2>Custom-palvelut</h2>
+    <p>Selaa tästä custom-esimerkkejä.</p>
+  
+</div>
+  <button class="slider-btn right">&#8594;</button>
+</section>
 
 
    <!-- UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK -->
@@ -297,26 +305,32 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               </p>
               <form>
                 <div class="form-group">
+                  <input type="text" id="name" placeholder=" " required />
+                  <label for="name" class="form-label">Nimi</label>
+                </div>
+                <div class="form-group">
                   <input type="email" id="email" placeholder=" " required />
                   <label for="email" class="form-label">Sähköposti</label>
                 </div>
                 <!--<input type="email" id="email" placeholder="etunimi.sukunimi@email.com" />-->
-                <button type="submit" class="btn btn-primary">
-                  Liity
+                <button type="submit" class="btn btn-space">
+                  LIITY
                 </button>
               </form>
             </div>
           </div>
           <div>
+            <div class="footer-box">
             <h4>Ota yhteyttä</h4>
             <ul>
               <li><a href="#"> <i class="fas fa-phone"></i> +358123456789</a></li>
               <li><a href="#"> <i class="fas fa-at"></i> projekti@projekti.com</a></li>
             </ul>
           </div>
+          </div>
           <div>
 
-            <div class="footer-socials">
+            <div class="footer-socials footer-box">
               <h4>Seuraa meitä</h4>
               <ul>
                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
@@ -325,7 +339,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
               </ul>
             </div>
-          
+          </div>
         </div>
       </div>
     </footer>

@@ -32,70 +32,167 @@ img {
   max-width: 100%;
 }
 
+/* NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI */
 
-/* NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI NAVIGOINTI*/
 .navbar {
-  background: #fff;
-  padding: 20px;
+  background: url('../images/kuva4.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 15px 0;
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .navbar .logo img {
-  max-width: 150px; 
+  max-width: 50px;
   height: auto;
+}
+
+.hamburger-button {
+  display: none; /* oletuksena piilotettu, näkyy media queryssä */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  z-index: 1001;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 2px;
 }
 
 .navbar .main-menu ul {
   display: flex;
+  list-style: none;
+  gap: 15px;
 }
 
 .navbar ul li a {
   padding: 10px 20px;
   display: block;
   font-weight: 600;
-  transition: 0.5s;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .navbar ul li a:hover {
   color: var(--primary-color);
 }
 
-.navbar ul li a i {
-  margin-right: 10px;
+/* Kirjautumispopup */
+.login-wrapper {
+  position: relative;
 }
 
-.navbar ul li:last-child a {
-  margin-left: 10px;
-  background-color: #e0e0e0;
-  border-radius: 10px;
-}
-
-.navbar ul li:last-child a:hover {
-  background-color: var(--primary-color);
-  color: #fff; 
-}
-
-/* HAMPURILAINEN* HAMPURILAINEN* HAMPURILAINEN* HAMPURILAINEN* HAMPURILAINEN* HAMPURILAINEN */
-.hamburger-button {
+.login-popup {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 250px;
   z-index: 1000;
 }
 
-.hamburger-button .hamburger-line {
-  width: 30px;
-  height: 3px;
-  background: black;
-  margin: 6px 0;
+.login-wrapper:hover .login-popup {
+  display: block;
 }
+
+.login-popup input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-popup button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+/* MOBILEMENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  transition: right 0.3s ease-in-out;
+  padding: 20px 20px;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 20px;
+}
+
+.mobile-menu ul li a {
+  color: #181818;
+  font-size: 20px;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+/* Näytetään hampurilainen ja piilotetaan normaali menu pienillä näytöillä */
+@media (max-width: 768px) {
+  .main-menu {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+}
+
+/* Suurennuslasi-nappi navissa */
+.search-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+
 
 /* TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT */
 .text-xxl {
@@ -159,52 +256,10 @@ img {
 }
 
 
-/* HERO-KUVARULLA HERO-KUVARULLA HERO-KUVARULLA HERO-KUVARULLA HERO-KUVARULLA */
-.hero-slider {
-  position: relative;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.hero-slider img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: var(--light-color);
-  color: #0f0f0f;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 10;
-  border-radius: 25%;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.slider-btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.slider-btn.left {
-  left: 20px;
-}
-
-.slider-btn.right {
-  right: 20px;
-}
-
 /* HERO TEKSTI ja PAINIKKEET HERO TEKSTI ja PAINIKKEET HERO TEKSTI ja PAINIKKEET */
 .hero {
-  padding: 20px 0;
+  padding-top: 10px;
+  padding-bottom: 40px;
   background: var(--light-color);
 }
 
@@ -245,6 +300,25 @@ img {
 .btn-demo.hovered {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+.btn-space {
+  background-image: url('../images/kuva4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.btn-space:hover {
+  opacity: 0.85;
 }
 
 
@@ -315,15 +389,81 @@ img {
 }
 
 
+/* HERO-KUVARULLA HERO-KUVARULLA HERO-KUVARULLA HERO-KUVARULLA HERO-KUVARULLA */
+.slider {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider img {
+  width: 100%;
+  max-width: 800px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto; /* keskittää kuvan */
+  
+}
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* läpinäkyvä tausta */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: var(--light-color);
+  color: #0f0f0f;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 25%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.slider-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.slider-btn.left {
+  left: 20px;
+}
+
+.slider-btn.right {
+  right: 20px;
+}
+
+
+
 /* PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT */
 .testimonials {
-  background-color:var(--light-color); 
-  padding: 40px 0;               
-}
+  background: url('../images/kuva4.jpg') no-repeat center center;
+  background-size: cover;
+  padding-bottom: 40px;
+  padding-top: 30px;
+}             
+
 .testimonials h2 {
   text-align: center;             
   font-size: 2em;                 
-  margin-bottom: 40px;    
+  margin-bottom: 40px; 
+  color: #fff;   
 }
 
 .card-container {
@@ -335,7 +475,6 @@ img {
 
 .card {
   width: 250px;
-  height: 250px;
   background-color: #fff; 
   color: #000;        
   padding: 1em;  
@@ -369,6 +508,14 @@ img {
   font-size: 1em;             
 }
 
+.card-img-bottom {
+  width: 40px !important;
+  height: auto !important;
+  object-fit: contain;
+  margin: 1em auto 0 auto;
+  display: block;
+}
+
 .card-container:hover .card {
   filter: blur(2px);
   opacity: 0.6;
@@ -396,11 +543,20 @@ img {
 }
 
 /* HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT */
+
+.pricing{
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.pricing-subheading {
+  margin-bottom: 40px; /* tai enemmän, esim. 60px tarpeen mukaan */
+}
+
 .pricing .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin-top: 30px;
 }
 
 .pricing-card {
@@ -477,7 +633,7 @@ img {
 }
 
 .pricing .pricing-footer {
-  margin: 30px 0;
+  margin: 30px 0px;
 }
 
 
@@ -502,20 +658,7 @@ img {
   padding: 10px;
 }
 
-/* PAINIKKEET  PAINIKKEET PAINIKKEET PAINIKKEET PAINIKKEET PAINIKKEET PAINIKKEET
-.btn {
-  display: inline-block;
-  padding: 13px 20px;
-  background: var(--light-color);
-  color: #333;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  text-align: center;
-  transition: 0.5s;
-}*/
+/* PAINIKKEET  PAINIKKEET PAINIKKEET PAINIKKEET PAINIKKEET PAINIKKEET PAINIKKEET*/
 
 .btn {
   padding: 1rem 2rem;
@@ -526,10 +669,21 @@ img {
   transition: background-color 0.3s, color 0.3s;
   border: none;         /* ← tämä poistaa reunuksen */
   outline: none;
+  display: inline-block;
 }
 
 .btn:hover {
   background-color: #fa0778;
+}
+
+.btn-start {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-start:hover {
+  background-color: #fa0778;
+  color: #fff;
 }
 
 .btn-primary {
@@ -612,12 +766,26 @@ img {
 
 
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
 .footer {
   padding: 40px 0;
+  background: url('../images/kuva4.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Yhtenäinen laatikkotyyli molemmille osioille */
+.footer-box,
+.footer-socials {
+  background-color: rgba(0, 0, 0, 0.7); /* läpinäkyvä musta tausta */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .footer h4 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .footer ul li {
@@ -644,7 +812,7 @@ img {
 .footer .card {
   width: auto;
   margin: 20px 30px 30px 0;
-  transition: transform 0.3s ease-in-out; /* ← lisätty myös tähän varmuuden vuoksi */
+  transition: transform 0.3s ease-in-out;
 }
 
 /* ✅ Animaation määrittely */
@@ -656,7 +824,7 @@ img {
   70% { transform: scale(1); }
 }
 
-/* ✅ Vain uutiskirjekorttiin */
+/* Uutiskirjekortti */
 .newsletter-card {
   transform-origin: center;
 }
@@ -665,17 +833,19 @@ img {
   animation: heartbeat 1s ease-in-out;
 }
 
+.footer input[type='text'],
 .footer input[type='email'] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 20px 0;
+  margin: 10px;
 }
 
+/* Lomakekenttä ja animoitu label */
 .form-group {
   position: relative;
-  margin: 12px 0;
+  margin: 2px 0;
 }
 
 .form-group input {
@@ -684,7 +854,7 @@ img {
   border-radius: 5px;
   border: #acacac solid 2px;
   background-color: transparent;
-  color: #eee;
+  color: #0b0b0b;
   width: 100%;
   transition: 0.15s all ease;
 }
@@ -698,7 +868,6 @@ img {
   color: transparent;
 }
 
-/* Label perusasento kentän sisällä */
 .form-group .form-label {
   position: absolute;
   top: 50%;
@@ -712,10 +881,9 @@ img {
   background-color: transparent;
 }
 
-/* Kun kenttä saa fokuksen TAI on täytetty → label siirtyy ylös */
 .form-group input:focus + .form-label,
 .form-group input:not(:placeholder-shown) + .form-label {
-  top: 10px;                /* ← tämä asettaa labelin juuri viivan kohdalle */
+  top: 10px;
   left: 12px;
   transform: none;
   font-size: 14px;
@@ -725,31 +893,21 @@ img {
   line-height: 1;
 }
 
-.footer-socials {
-  gap: 0.5rem;
-  max-width: 400px;
-  margin-top: 1rem;
-}
-
-.footer-socials a {
-  color: #fff;
-  font-size: 200%;
-  text-align: center;
-  transition: color 0.3s;
+/* Footerin someosio nyt yhtenäinen muiden kanssa */
+.footer-socials h4 {
+  margin-bottom: 15px;
 }
 
 .footer-socials ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   margin: 0;
   display: flex;
-  gap: 0.5rem;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .footer-socials li {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -765,6 +923,7 @@ img {
 .footer-socials a:hover {
   color: var(--primary-color); /* pinkiksi hoverissa */
 }
+
 
 /* MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU */
 .mobile-menu {
@@ -869,3 +1028,4 @@ img {
     font-size: 2rem;
   }
 }
+
