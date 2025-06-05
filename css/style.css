@@ -490,7 +490,7 @@ img {
 
 .card {
   width: 250px;
-  background-color: #fff; 
+  background-color: #fff
   color: #000;        
   padding: 1em;  
   border-radius: 5px;
@@ -649,6 +649,137 @@ img {
 
 .pricing .pricing-footer {
   margin: 30px 0px;
+}
+
+
+/* ASIANTUNTIJAT */
+.experts {
+  background: url('../images/kuva4.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px;
+}
+
+.experts-wrapper {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.experts-heading {
+  min-width: 300px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.experts-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.experts-heading p {
+  font-size: 1.1rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.experts-blog-link {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.expert-cards {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.expert-card {
+  display: flex;
+  background: #ece8f6;
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center;
+}
+
+.expert-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.expert-info {
+  margin-left: 20px;
+}
+
+.expert-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.expert-info p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.expert-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.expert-link .arrow {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.expert-link:hover {
+  color: var(--primary-color); /* käytä pinkkiä tehoväriä */
+}
+
+/* Responsiivisuus: pinotaan pienillä näytöillä */
+@media (max-width: 768px) {
+  .experts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .experts-heading,
+  .expert-cards {
+    width: 100%;
+  }
+
+  .expert-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .expert-card img {
+    margin-bottom: 10px;
+  }
+
+  .expert-info {
+    margin-left: 0;
+  }
 }
 
 
