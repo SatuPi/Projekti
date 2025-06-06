@@ -15,7 +15,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="shortcut icon" href="images/planeetta.png" type="image/x-icon">
 
       </head>
-<button id="scrollToTopBtn" class="scroll-btn" title="Takaisin ylös">&#8593;</button>
+<button id="scrollToTopBtn" class="scroll-btn" title="Takaisin ylös">
+  <i class="fas fa-rocket"></i>
+</button>
   <body>
 
 
@@ -23,7 +25,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <nav class="navbar">
   <div class="container">
     <div class="logo">
-      <a href="index.html"><img src="images/planeetta.png" alt="logo" /></a>
+      <a href="index.html"><img src="images/logo-white.png" alt="logo" /></a>
     </div>
 
     <!-- Hampurilaisvalikko -->
@@ -71,24 +73,21 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 <!-- KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN KIRJAUTUMINEN -->
-<div id="login-modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="document.getElementById('login-modal').style.display='none'">&times;</span>
-    <h3>Kirjaudu sisään</h3>
+<div class="login-wrapper">
+  <div class="login-popup" id="login-popup">
     <form>
-      <label for="login-email">Sähköposti:</label>
-      <input type="email" id="login-email" required><br><br>
+      <label for="email">Sähköposti:</label>
+      <input type="email" id="email" required>
 
-      <label for="login-password">Salasana:</label>
-      <input type="password" id="login-password" required><br><br>
+      <label for="password">Salasana:</label>
+      <input type="password" id="password" required>
 
       <button type="submit" class="btn btn-primary">Kirjaudu</button>
     </form>
   </div>
 </div>
 
-
-<!-- HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO -->
+<!-- OTSIKKO+DEMOVIDEO+PAINIKKEET OTSIKKO+DEMOVIDEO+PAINIKKEET OTSIKKO+DEMOVIDEO+PAINIKKEET-->
 
 <section class="hero">
   <div class="container text-center">
@@ -104,20 +103,19 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </video>
       </div>
 
-      <!-- Painikkeet videon alla -->
-      <div class="hero-buttons" style="margin-top: 20px;">
-        <a href="#" class="btn btn-start">Liity asiakkaaksi</a>
-        <a href="javascript:void(0)" class="btn btn-demo"
-          onclick="document.getElementById('calendar-modal').style.display='block'">Varaa demo</a>
-      </div>
+<!-- Painikkeet videon alla -->
+<div class="hero-buttons" style="margin-top: 20px;">
+  <a href="javascript:void(0)" class="btn btn-start" onclick="document.getElementById('signup-modal').style.display='block'">Liity asiakkaaksi</a>
+  <a href="javascript:void(0)" class="btn btn-demo" onclick="document.getElementById('calendar-modal').style.display='block'">Varaa demo</a>
+</div>
     </div>
   </div>
 </section>
 
 
 <!-- AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS AJANVARAUS -->
-<div id="calendar-modal" class="modal">
-  <div class="modal-content">
+<div id="calendar-modal" class="calendar-modal">
+  <div class="calendar-modal-content">
   <span class="close" onclick="document.getElementById('calendar-modal').style.display='none'">&times;</span>
   <h3>Valitse aika</h3>
 
@@ -135,14 +133,34 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </select>
 
-    <button type="submit" class="btn btn-primary">Varaa</button>
+    <button type="submit" class="btn btn-space text-xl">VARAA</button>
   </form>
 </div>
 </div>
 
+<!-- LIITY ASIAKKAAKSI POP-UP -->
+<div id="signup-modal" class="signup-modal">
+  <div class="signup-modal-content">
+    <span class="close" onclick="document.getElementById('signup-modal').style.display='none'">&times;</span>
+    <h3>Liity asiakkaaksi</h3>
+    <form>
+      <label for="name">Nimi:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Sähköposti:</label>
+      <input type="email" id="email" required>
+
+      <label><input type="checkbox" required> Hyväksyn tietosuojakäytännön</label>
+      <label><input type="checkbox"> Haluan saada uutiskirjeen</label>
+
+      <button type="submit" class="btn btn-space text-xl">LIITY</button>
+    </form>
+  </div>
+</div>
+
 <!-- PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT -->
 <section class="testimonials">
-  <h2>Palvelumme</h2>
+  <h2>PALVELUMME</h2>
   <div class="card-container">
     <!-- Palvelukortti 1 -->
     <div class="card">
@@ -184,7 +202,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           <!-- HINTA 1 -->
           <div class="card pricing-card bg-light">
             <div class="pricing-card-header">
-              <h4 class="pricing-heading text-xl text-center">Normi</h4>
+              <h4 class="pricing-card-heading text-xl text-center">Normi</h4>
               <p class="pricing-card-subheading text-center">
                 Seuraa normaaleja asioita.</p>
               <p class="pricing-card-price text-center">
@@ -290,7 +308,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
    <!-- UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK -->
     <section class="faq bg-light">
       <div class="container-sm">
-        <h3 class="text-xl text-center">Usein Kysytyt Kysymykset</h3>
+        <h3 class="text-xl text-center pricing-heading">Usein Kysytyt Kysymykset</h3>
         <ul class="faq-menu">
           <li class="active">Kaikki</li>
           <li>Uusimmat</li>
@@ -372,7 +390,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           </div>
           <div>
             <div class="footer-box">
-            <h4>Ota yhteyttä</h4>
+              <img src="images/logo-white.png" alt="logo-white">
+            <!--<h4>Ota yhteyttä</h4>-->
             <ul>
               <li><a href="#"> <i class="fas fa-phone"></i> +358123456789</a></li>
               <li><a href="#"> <i class="fas fa-at"></i> projekti@projekti.com</a></li>

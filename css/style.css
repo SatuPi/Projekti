@@ -32,12 +32,12 @@ img {
   max-width: 100%;
 }
 
-/* NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI */
 
+/* NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI */
 .navbar {
   background: url('../images/kuva4.jpg') no-repeat center center;
   background-size: cover;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 
 .navbar .container {
@@ -48,30 +48,8 @@ img {
 }
 
 .navbar .logo img {
-  max-width: 50px;
+  max-width: 200px;
   height: auto;
-}
-
-.hamburger-button {
-  display: none; /* oletuksena piilotettu, näkyy media queryssä */
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 40px;
-  height: auto;
-  z-index: 1001;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.hamburger-line {
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #fff;
-  margin: 6px 0;
-  border-radius: 2px;
 }
 
 .navbar .main-menu ul {
@@ -94,7 +72,32 @@ img {
   color: var(--primary-color);
 }
 
-/* Kirjautumispopup */
+
+/* HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN*/
+.hamburger-button {
+  display: none; 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  z-index: 1001;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+
+/* KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU KIRJAUDU */
 .login-wrapper {
   position: relative;
 }
@@ -104,8 +107,9 @@ img {
   position: absolute;
   top: 50px;
   right: 0;
-  background-color: #fff;
-  color: #000;
+  background: url('../images/kuva4.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff; 
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -134,7 +138,7 @@ img {
   border-radius: 5px;
 }
 
-/* MOBILEMENU */
+/* MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -183,8 +187,6 @@ img {
 
 
 
-
-
 /* TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT */
 .text-xxl {
   font-size: 3rem;
@@ -225,6 +227,7 @@ img {
   text-align: center;
 }
 
+
 /* TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA */
 .bg-primary {
   background: var(--primary-color);
@@ -247,7 +250,7 @@ img {
 }
 
 
-/* HERO TEKSTI ja PAINIKKEET HERO TEKSTI ja PAINIKKEET HERO TEKSTI ja PAINIKKEET */
+/* DEMO VIDEO JA PAINIKKEET DEMO VIDEO JA PAINIKKEET DEMO VIDEO JA PAINIKKEET*/
 .hero {
   padding-top: 10px;
   padding-bottom: 40px;
@@ -258,6 +261,16 @@ img {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: url('../images/kuva4.jpg') no-repeat center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero .hero-text {
@@ -336,9 +349,69 @@ img {
   opacity: 0.85;
 }
 
+.scroll-btn i {
+  font-size: 1.6rem;
+  transform: rotate(-45deg);
+}
 
-/* IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA IKKUNA */
-.modal {
+/* LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI*/
+.signup-modal {
+  display: none;  /* 🔧 Tämä piilottaa ikkunan oletuksena */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.signup-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.signup-modal-content h3 {
+  margin-bottom: 1rem;
+}
+
+.signup-modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-modal-content form input[type="text"],
+.signup-modal-content form input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-modal-content form label {
+  font-weight: 500;
+}
+
+.signup-modal-content .close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.signup-modal-content .close:hover {
+  color: black;
+}
+
+/* VARAA DEMO POP-UP VARAA DEMO POP-UP VARAA DEMO POP-UP */
+.calendar-modal {
   display: none;
   position: fixed;
   z-index: 999;
@@ -350,11 +423,11 @@ img {
   background-color: rgba(0,0,0,0.6);
 }
 
-.modal-content h3 {
+.calendar-modal-content h3 {
   margin-bottom: 1rem;
 }
 
-.modal-content {
+.calendar-modal-content {
   background-color: #fff;
   margin: 10% auto;
   padding: 30px;
@@ -364,17 +437,17 @@ img {
   border-radius: 10px;
 }
 
-.modal-content form {
+.calendar-modal-content form {
   display: flex;
   flex-direction: column;
   gap: 1rem; /* tämä lisää väliä kenttien väliin */
 }
 
-.modal-content form button {
-  align-self: flex-end; /* siirtää napin oikeaan reunaan */
+.calendar-modal-content form button {
+  align-self: center; 
 }
 
-.close {
+.calendar-modal .close {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -382,7 +455,7 @@ img {
   cursor: pointer;
 }
 
-.close:hover {
+.calendar-modal .close:hover {
   color: black;
 }
 
@@ -490,16 +563,17 @@ img {
 
 .card {
   width: 250px;
-  background-color: #fff
-  color: #000;        
-  padding: 1em;  
+  background-color: rgba(255, 255, 255, 0.50);
+  color: #000;
+  padding: 1em;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);                
-  display: flex; 
-  flex-direction: column; 
-  justify-content: space-between;             
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* 👈 Tämä tekee kursorin "aktiiviseksi" */
 }
 
 .card .icon {
@@ -562,6 +636,16 @@ img {
 .pricing{
   padding-top: 10px;
   padding-bottom: 30px;
+}
+
+.pricing-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: url('../images/kuva4.jpg') no-repeat center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .pricing-subheading {
@@ -661,7 +745,7 @@ img {
 
 .experts-wrapper {
   display: grid;
-  grid-template-columns: 1.8fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
@@ -1037,6 +1121,13 @@ img {
   color: #020202;
   background-color: #fff;
   line-height: 1;
+}
+
+.footer-box img {
+  max-width: 120px;  /* tai esim. 100px */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px; /* keskittää kuvan ja lisää vähän väliä alle */
 }
 
 /* Footerin someosio nyt yhtenäinen muiden kanssa */
