@@ -1212,6 +1212,15 @@ img {
   }
 }
 
+ .new-price {
+    display: inline !important;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    color: #888;
+  }
+
 /* Alle 670px – tarkempia mobiilimuokkauksia (hero, footer, hinnasto) */
 @media (max-width: 670px) {
   .navbar .main-menu {
