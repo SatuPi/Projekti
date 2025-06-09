@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  // FAQ Accordion
+
+  // USEIN KYSYTYT KYSYMYKSET
   const faqContainer = document.querySelector('.faq-content');
   faqContainer?.addEventListener('click', (e) => {
     const groupHeader = e.target.closest('.faq-group-header');
@@ -26,15 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile Menu
-  const hamburgerButton = document.querySelector('.hamburger-button');
-  const mobileMenu = document.querySelector('#mobileMenu');
-  hamburgerButton?.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-  });
 
+  // MOBILE MENU
+const hamburgerButton = document.querySelector('.hamburger-button');
+const mobileMenu = document.querySelector('#mobileMenu');
+const closeMobileMenuBtn = document.querySelector('.close-mobile-menu');
 
-  // Hero image slider
+hamburgerButton?.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+  hamburgerButton.style.display = 'none'; 
+});
+
+closeMobileMenuBtn?.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+  hamburgerButton.style.display = 'block'; 
+});
+
+  // KUVARULLA
   const images = ['images/kuva1.jpg', 'images/kuva2.jpg', 'images/kuva3.jpg', 'images/kuva5.jpg','images/kuva6.jpg'];
   let currentIndex = 0;
   const sliderImage = document.getElementById('slider-image');
@@ -57,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateImage();
   });
 
-  // Hover effect for demo button
+  // HOVER PAINIKKEILLE
   const startBtn = document.querySelector('.btn-start');
   const demoBtn = document.querySelector('.btn-demo');
 
@@ -72,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Scroll to top -nappi
+// TAKAISIN YLÖS PAINIKE
   const scrollBtn = document.getElementById("scrollToTopBtn");
 
   window.addEventListener("scroll", () => {
@@ -86,3 +95,4 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollBtn?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+

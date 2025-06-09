@@ -32,6 +32,27 @@ img {
   max-width: 100%;
 }
 
+/* TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA */
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
 
 /* NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI  NAVIGOINTI */
 .navbar {
@@ -70,30 +91,6 @@ img {
 
 .navbar ul li a:hover {
   color: var(--primary-color);
-}
-
-
-/* HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN*/
-.hamburger-button {
-  display: none; 
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 40px;
-  height: auto;
-  z-index: 1001;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.hamburger-line {
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #fff;
-  margin: 6px 0;
-  border-radius: 2px;
 }
 
 
@@ -138,6 +135,31 @@ img {
   border-radius: 5px;
 }
 
+
+/* HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN HAMPURILAINEN*/
+.hamburger-button {
+  display: none; 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  z-index: 1001;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+
 /* MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU */
 .mobile-menu {
   position: fixed;
@@ -145,19 +167,46 @@ img {
   right: -300px;
   width: 250px;
   height: 100%;
-  background: #000;
   z-index: 999;
   transition: right 0.3s ease-in-out;
-  padding: 20px 20px;
+  padding: 60px 20px 20px 20px;
+  color: #fff;
+  background: url('../images/kuva-mobilemenu.jpg') no-repeat center;
+  background-size: cover;
+  overflow-y: auto;
 }
 
 .mobile-menu.active {
   right: 0;
 }
 
+.mobile-menu.active .close-mobile-menu {
+  display: block; 
+}
+
+.close-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.close-mobile-menu:hover {
+  color: var(--primary-color);
+}
+
 .mobile-menu ul {
+  position: relative;
+  z-index: 1;
   list-style: none;
   padding: 0;
+  margin 0;
 }
 
 .mobile-menu ul li {
@@ -165,16 +214,19 @@ img {
 }
 
 .mobile-menu ul li a {
-  color: #181818;
+  color: #fff;
   font-size: 20px;
   display: block;
-  background: rgba(255, 255, 255, 0.1);
+  background: #000
   padding: 10px;
   border-radius: 8px;
 }
 
+.mobile-menu ul li a:hover {
+  color: var(--primary-color);
+}
 
-/* Näytetään hampurilainen ja piilotetaan normaali menu pienillä näytöillä */
+/* Näytetään hampurilainen ja piilotetaan normaali menu pienillä näytöillä 
 @media (max-width: 768px) {
   .main-menu {
     display: none;
@@ -183,71 +235,7 @@ img {
   .hamburger-button {
     display: block;
   }
-}
-
-
-
-/* TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT */
-.text-xxl {
-  font-size: 3rem;
-  line-height: 1.2;
-  font-weight: 600;
-  margin: 40px 0 20px;
-}
-
-.text-xl {
-  font-size: 2.2rem;
-  line-height: 1.4;
-  font-weight: normal;
-  margin: 40px 0 20px;
-}
-
-.text-lg {
-  font-size: 1.8rem;
-  line-height: 1.4;
-  font-weight: normal;
-  margin: 30px 0 20px;
-}
-
-.text-md {
-  font-size: 1.2rem;
-  line-height: 1.4;
-  font-weight: normal;
-  margin: 20px 0 10px;
-}
-
-.text-sm {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  font-weight: normal;
-  margin: 10px 0 5px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-
-/* TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA TAUSTA */
-.bg-primary {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-.bg-light {
-  background: var(--light-color);
-  color: #333;
-}
-
-.bg-dark {
-  background: var(--dark-color);
-  color: #fff;
-}
-
-.bg-black {
-  background: #000;
-  color: #fff;
-}
+}*/
 
 
 /* DEMO VIDEO JA PAINIKKEET DEMO VIDEO JA PAINIKKEET DEMO VIDEO JA PAINIKKEET*/
@@ -286,8 +274,19 @@ img {
 
 .video-wrapper {
   position: relative;
-  max-width: 800px;
-  margin: 30px auto 10px;
+  max-width: 720px;
+  margin: 20px auto;
+}
+
+.video-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
 }
 
 .video-wrapper video {
@@ -356,7 +355,7 @@ img {
 
 /* LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI LIITY ASIAKKAAKSI*/
 .signup-modal {
-  display: none;  /* 🔧 Tämä piilottaa ikkunan oletuksena */
+  display: none; 
   position: fixed;
   z-index: 999;
   left: 0;
@@ -410,7 +409,7 @@ img {
   color: black;
 }
 
-/* VARAA DEMO POP-UP VARAA DEMO POP-UP VARAA DEMO POP-UP */
+/* VARAA DEMO POP-UP VARAA DEMO POP-UP VARAA DEMO POP-UP VARAA DEMO POP-UP VARAA DEMO POP-UP */
 .calendar-modal {
   display: none;
   position: fixed;
@@ -440,7 +439,7 @@ img {
 .calendar-modal-content form {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* tämä lisää väliä kenttien väliin */
+  gap: 1rem;
 }
 
 .calendar-modal-content form button {
@@ -460,7 +459,7 @@ img {
 }
 
 
-/* HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI */
+/* HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI HERO-MOBIILI 
 @media (max-width: 768px) {
   .slider-btn {
     font-size: 1.5rem;
@@ -474,69 +473,7 @@ img {
   .hero-buttons {
     flex-direction: column;
   }
-}
-
-
-/* KUVARULLA KUVARULLA KUVARULLA KUVARULLA KUVARULLA */
-.slider {
-  position: relative;
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slider img {
-  width: 100%;
-  max-width: 800px;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto; /* keskittää kuvan */
-  
-}
-.slider-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background: rgba(0, 0, 0, 0.5); /* läpinäkyvä tausta */
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  background: var(--light-color);
-  color: #0f0f0f;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 10;
-  border-radius: 50%;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.slider-btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.slider-btn.left {
-  left: 20px;
-}
-
-.slider-btn.right {
-  right: 20px;
-}
-
+}*/
 
 
 /* PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT PALVELUT */
@@ -573,7 +510,7 @@ img {
   justify-content: space-between;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* 👈 Tämä tekee kursorin "aktiiviseksi" */
+  cursor: pointer;
 }
 
 .card .icon {
@@ -622,15 +559,30 @@ img {
   color: var(--primary-color);
 }
 
-/* Poistetaan blur ja korostetaan hover-kortti */
 .card-container .card:hover {
   filter: none;
   opacity: 1;
   transform: translateY(-8px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  color: var(--primary-color); /* esim. pinkki teksti */
+  color: var(--primary-color);
 }
 
+/*@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+}*/
 
 /* HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT */
 .pricing{
@@ -655,6 +607,7 @@ img {
 .pricing .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
   gap: 30px;
 }
 
@@ -698,7 +651,6 @@ img {
   background-color: #fdd31a;
   padding: 0.2em 0.4em;
   border-radius: 4px;
-  /*box-shadow: 0 0 2px #f6f646;*/
 }
 
 .pricing-card:hover .old-price {
@@ -736,7 +688,68 @@ img {
 }
 
 
-/* ASIANTUNTIJAT */
+/* KUVARULLA KUVARULLA KUVARULLA KUVARULLA KUVARULLA KUVARULLA KUVARULLA KUVARULLA KUVARULLA */
+.slider {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider img {
+  width: 100%;
+  max-width: 800px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  
+}
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  background: var(--light-color);
+  color: #0f0f0f;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.slider-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.slider-btn.left {
+  left: 20px;
+}
+
+.slider-btn.right {
+  right: 20px;
+}
+
+
+/* ASIANTUNTIJAT ASIANTUNTIJAT ASIANTUNTIJAT ASIANTUNTIJAT ASIANTUNTIJAT ASIANTUNTIJAT */
 .experts {
   background: url('../images/kuva4.jpg') no-repeat center center;
   background-size: cover;
@@ -836,11 +849,344 @@ img {
 }
 
 .expert-link:hover {
-  color: var(--primary-color); /* käytä pinkkiä tehoväriä */
+  color: var(--primary-color);
 }
 
-/* Responsiivisuus: pinotaan pienillä näytöillä */
+/* ASIANTUNTIJAT-MOBIILI ASIANTUNTIJAT-MOBIILI ASIANTUNTIJAT-MOBIILI ASIANTUNTIJAT-MOBIILI 
 @media (max-width: 768px) {
+  .experts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .experts-heading,
+  .expert-cards {
+    width: 100%;
+  }
+
+  .expert-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .expert-card img {
+    margin-bottom: 10px;
+  }
+
+  .expert-info {
+    margin-left: 0;
+  }
+}*/
+
+
+/* UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK */
+.faq {
+  padding: 10px 0;
+}
+
+.faq .faq-group {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq .faq-group .faq-group-header {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.faq .faq-group .faq-group-header h4 {
+  font-weight: 600;
+  width: 95%;
+}
+
+.faq .faq-group .faq-group-header i {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.faq .faq-group .faq-group-body {
+  display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+  display: block;
+}
+
+.faq ul.faq-menu {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.faq ul.faq-menu li.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
+.footer {
+  padding: 40px 0;
+  background: url('../images/kuva4.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.footer-box,
+.footer-socials {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .card {
+  width: auto;
+  margin: 20px 30px 30px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* UUTISKIRJE UUTISKIRJE UUTISKIRJE UUTISKIRJE UUTISKIRJE UUTISKIRJE UUTISKIRJE UUTISKIRJE  */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+.newsletter-card {
+  transform-origin: center;
+}
+
+.newsletter-card:hover {
+  animation: heartbeat 1s ease-in-out;
+}
+
+.footer input[type='text'],
+.footer input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.form-group {
+  position: relative;
+  margin: 2px 0;
+}
+
+.form-group input {
+  padding: 8px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: #acacac solid 2px;
+  background-color: transparent;
+  color: #0b0b0b;
+  width: 100%;
+  transition: 0.15s all ease;
+}
+
+.form-group input:focus {
+  border-color: #eee;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: transparent;
+}
+
+.form-group .form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  font-size: 18px;
+  color: #acacac;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  background-color: transparent;
+}
+
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label {
+  top: 10px;
+  left: 12px;
+  transform: none;
+  font-size: 14px;
+  padding: 0 6px;
+  color: #020202;
+  background-color: #fff;
+  line-height: 1;
+}
+
+.footer-box img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.footer-socials h4 {
+  margin-bottom: 15px;
+}
+
+.footer-socials ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-socials li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.5rem;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-color);
+}
+
+
+/* TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS*/
+.scroll-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 2rem;
+  background: var(--light-color);
+  color: #0f0f0f;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, color 0.3s;
+  display: none;
+}
+
+.scroll-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
+/* MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES */
+
+/* Alle 960px – isojen otsikoiden koon säätö */
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger-button {
+    display: none;
+  }
+}
+
+/* Alle 768px – mobiilinäkymä (valikot, kortit, hero, asiantuntijat) */
+@media (max-width: 768px) {
+  /* Navigaatio */
+  .main-menu {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  /* Hero-osio */
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  .hero .hero-content {
+    width: 90%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  /* Palvelukortit (testimonials) */
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* Asiantuntijat */
   .experts-wrapper {
     display: flex;
     flex-direction: column;
@@ -866,6 +1212,48 @@ img {
   }
 }
 
+/* Alle 670px – tarkempia mobiilimuokkauksia (hero, footer, hinnasto) */
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .navbar .hamburger-button {
+    display: block;
+  }
+
+  .hero .hero-content,
+  .hero .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-buttons .btn {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .testimonials .testimonials-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .testimonials .testimonials-grid,
+  .pricing .pricing-grid,
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .card {
+    margin-right: 0;
+  }
+
+  .footer .footer-grid > div {
+    text-align: center;
+  }
+}
+
 
 /* CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER */
 .container {
@@ -878,6 +1266,47 @@ img {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+
+/* TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT TEKSTILUOKAT */
+.text-xxl {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 40px 0 20px;
+}
+
+.text-xl {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 40px 0 20px;
+}
+
+.text-lg {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 0 20px;
+}
+
+.text-md {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 20px 0 10px;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 10px 0 5px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* KORTIT KORTIT KORTIT KORTIT KORTIT KORTIT KORTIT KORTIT KORTIT KORTIT KORTIT */
@@ -931,320 +1360,6 @@ img {
   width: 100%;
 }
 
-/* UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK UKK */
-.faq {
-  padding: 10px 0;
-}
-
-.faq .faq-group {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-}
-
-.faq .faq-group .faq-group-header {
-  padding: 10px 0;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.faq .faq-group .faq-group-header h4 {
-  font-weight: 600;
-  width: 95%;
-}
-
-.faq .faq-group .faq-group-header i {
-  position: absolute;
-  right: 0;
-  top: 35px;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-
-.faq .faq-group .faq-group-body {
-  display: none;
-}
-
-.faq .faq-group .faq-group-body.open {
-  display: block;
-}
-
-
-
-.faq ul.faq-menu {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ddd;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.faq ul.faq-menu li {
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.faq ul.faq-menu li.active {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-
-/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
-
-.footer {
-  padding: 40px 0;
-  background: url('../images/kuva4.jpg') no-repeat center center;
-  background-size: cover;
-  color: #fff;
-}
-
-/* Yhtenäinen laatikkotyyli molemmille osioille */
-.footer-box,
-.footer-socials {
-  background-color: rgba(0, 0, 0, 0.7); /* läpinäkyvä musta tausta */
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.footer h4 {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.footer ul li {
-  line-height: 2.5;
-}
-
-.footer a {
-  color: #ccc;
-}
-
-.footer i {
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer .card {
-  width: auto;
-  margin: 20px 30px 30px 0;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* ✅ Animaation määrittely */
-@keyframes heartbeat {
-  0% { transform: scale(1); }
-  14% { transform: scale(1.1); }
-  28% { transform: scale(1); }
-  42% { transform: scale(1.1); }
-  70% { transform: scale(1); }
-}
-
-/* Uutiskirjekortti */
-.newsletter-card {
-  transform-origin: center;
-}
-
-.newsletter-card:hover {
-  animation: heartbeat 1s ease-in-out;
-}
-
-.footer input[type='text'],
-.footer input[type='email'] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 10px;
-}
-
-/* Lomakekenttä ja animoitu label */
-.form-group {
-  position: relative;
-  margin: 2px 0;
-}
-
-.form-group input {
-  padding: 8px 10px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: #acacac solid 2px;
-  background-color: transparent;
-  color: #0b0b0b;
-  width: 100%;
-  transition: 0.15s all ease;
-}
-
-.form-group input:focus {
-  border-color: #eee;
-  outline: none;
-}
-
-.form-group input::placeholder {
-  color: transparent;
-}
-
-.form-group .form-label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 12px;
-  font-size: 18px;
-  color: #acacac;
-  padding: 0 5px;
-  pointer-events: none;
-  transition: 0.15s ease;
-  background-color: transparent;
-}
-
-.form-group input:focus + .form-label,
-.form-group input:not(:placeholder-shown) + .form-label {
-  top: 10px;
-  left: 12px;
-  transform: none;
-  font-size: 14px;
-  padding: 0 6px;
-  color: #020202;
-  background-color: #fff;
-  line-height: 1;
-}
-
-.footer-box img {
-  max-width: 120px;  /* tai esim. 100px */
-  height: auto;
-  display: block;
-  margin: 0 auto 15px; /* keskittää kuvan ja lisää vähän väliä alle */
-}
-
-/* Footerin someosio nyt yhtenäinen muiden kanssa */
-.footer-socials h4 {
-  margin-bottom: 15px;
-}
-
-.footer-socials ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.footer-socials li {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.footer-socials a {
-  color: #fff;
-  font-size: 1.5rem;
-  display: inline-block;
-  transition: color 0.3s;
-}
-
-.footer-socials a:hover {
-  color: var(--primary-color); /* pinkiksi hoverissa */
-}
-
-
-/* MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU MOBILEMENU */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 250px;
-  height: 100%;
-  z-index: 100;
-  background: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease-in-out;
-}
-
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-menu ul {
-  margin-top: 100px;
-  padding-right: 10px;
-}
-
-.mobile-menu ul li {
-  margin: 10px 0;
-}
-
-.mobile-menu ul li a {
-  font-size: 20px;
-  transition: 0.3s;
-}
-
-/* MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES */
-@media (max-width: 960px) {
-  .text-xxl {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 670px) {
-  .navbar .main-menu {
-    display: none;
-  }
-
-  .navbar .hamburger-button {
-    display: block;
-  }
-
-  /*.hero .container {
-    background-size: 350px 400px;
-    background-position: bottom;
-    height: 770px;
-  }*/
-
-  .hero .hero-content,
-  .hero .hero-text {
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero .hero-buttons .btn {
-    margin-bottom: 10px;
-    display: block;
-    width: 100%;
-  }
-
-  .testimonials .testimonials-heading {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .testimonials .testimonials-grid,
-  .pricing .pricing-grid,
-  .footer .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer .card {
-    margin-right: 0;
-  }
-
-  .footer .footer-grid > div {
-    text-align: center;
-  }
 
   /* TEKSTIT TEKSTIT TEKSTIT TEKSTIT TEKSTIT TEKSTIT TEKSTIT TEKSTIT TEKSTIT TEKSTIT */
   .text-xl {
@@ -1258,7 +1373,6 @@ img {
   .text-md {
     font-size: 1.1rem;
   }
-}
 
 @media (max-width: 500px) {
   .text-xxl {
@@ -1266,25 +1380,3 @@ img {
   }
 }
 
-/* TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS TAKAISIN YLÖS*/
-.scroll-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  font-size: 2rem;
-  background: var(--light-color);
-  color: #0f0f0f;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1000;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s, color 0.3s;
-  display: none;
-}
-
-.scroll-btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}

@@ -96,12 +96,13 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       <p class="hero-text">Tässä on hieno toimiva palvelu.</p>
 
       <!-- Video näkyvissä automaattisesti -->
-      <div id="hero-video-wrapper" style="margin: 20px auto; max-width: 720px;">
-        <video id="heroVideo" width="100%" autoplay muted loop playsinline>
-          <source src="videos/demo.mp4" type="video/mp4" />
-          Selaimesi ei tue videon toistoa.
-        </video>
-      </div>
+<div id="hero-video-wrapper" class="video-wrapper">
+  <video id="heroVideo" width="100%" autoplay muted loop playsinline>
+    <source src="videos/demo.mp4" type="video/mp4" />
+    Selaimesi ei tue videon toistoa.
+  </video>
+  <div class="video-label">Demo-video</div>
+</div>
 
 <!-- Painikkeet videon alla -->
 <div class="hero-buttons" style="margin-top: 20px;">
@@ -228,7 +229,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 Seuraa kaikkia asioita.
               </p>
               <p class="pricing-card-price text-center">
-                <span class="old-price">99€</span>
+                <span class="old-price">99€/kk</span>
                 <span class="new-price">NYT VAIN 49€/kuukausi</span> 
               </p>
             </div>
