@@ -1,6 +1,6 @@
 Projektin kuvaus
 
-Kyseessä on front end -harjoitusprojekti, jossa on keskitytty erityisesti erilaisten sivuosioiden rakenteeseen ja toiminnallisuuksien monipuoliseen kokeilemiseen (ei niinkään esimerkiksi ux tai usability periaatteisiin). Tavoitteena ei ole ollut rakentaa valmiita, kaupallisia verkkosivuja, vaan harjoitella käytännön taitoja HTML:n, CSS:n ja JavaScriptin avulla.
+Kyseessä on front end -harjoitusprojekti, jossa on keskitytty erityisesti erilaisten sivuosioiden rakenteeseen ja toiminnallisuuksien monipuoliseen kokeilemiseen (ei niinkään esimerkiksi ux tai usability periaatteisiin tai tekstisisältöihin). Tavoitteena ei ole ollut rakentaa valmiita, kaupallisia verkkosivuja, vaan harjoitella käytännön taitoja HTML:n, CSS:n ja JavaScriptin avulla.
 
 Sivustolla on toteutettu seuraavat osiot ja ominaisuudet:
 
