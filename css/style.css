@@ -541,14 +541,6 @@ img {
   color: var(--primary-color);
 }
 
-.card-container .card:hover {
-  filter: none;
-  opacity: 1;
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  color: var(--primary-color);
-}
-
 
 /* HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT HINNAT */
 .pricing{
@@ -1277,7 +1269,7 @@ img {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  border: none;         /* ← tämä poistaa reunuksen */
+  border: none;         
   outline: none;
   display: inline-block;
 }
